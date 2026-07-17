@@ -91,29 +91,29 @@
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.195 0.035 260);
 
-  /* Brand semantic tokens — aligned with Expansion logo (black + royal blue) */
-  --primary: oklch(0.18 0.02 260);
+  /* Brand semantic tokens — Expansion flyer palette (deep navy + gold) */
+  --primary: oklch(0.22 0.05 255);
   --primary-foreground: oklch(0.985 0.004 260);
   --secondary: oklch(0.945 0.015 255);
-  --secondary-foreground: oklch(0.18 0.02 260);
-  --muted: oklch(0.945 0.015 255);
+  --secondary-foreground: oklch(0.22 0.05 255);
+  --muted: oklch(0.955 0.012 255);
   --muted-foreground: oklch(0.5 0.03 255);
-  --accent: oklch(0.55 0.22 260);
-  --accent-foreground: oklch(0.985 0.004 260);
+  --accent: oklch(0.76 0.14 85);
+  --accent-foreground: oklch(0.18 0.04 255);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
   --border: oklch(0.9 0.01 255);
   --input: oklch(0.9 0.01 255);
-  --ring: oklch(0.55 0.22 260);
+  --ring: oklch(0.76 0.14 85);
 
-  /* Extended brand palette — navy = near-black wordmark; accent = logo blue */
-  --navy: oklch(0.16 0.015 260);
-  --navy-light: oklch(0.28 0.025 260);
-  --navy-dark: oklch(0.1 0.01 260);
-  --tangerine: oklch(0.55 0.22 260);
-  --tangerine-light: oklch(0.65 0.2 260);
-  --tangerine-dark: oklch(0.45 0.22 260);
-  --ink: oklch(0.12 0.015 260);
+  /* Extended brand palette — navy from the flyer background; accent = gold */
+  --navy: oklch(0.22 0.05 255);
+  --navy-light: oklch(0.32 0.06 255);
+  --navy-dark: oklch(0.15 0.04 255);
+  --tangerine: oklch(0.76 0.14 85);
+  --tangerine-light: oklch(0.84 0.12 88);
+  --tangerine-dark: oklch(0.66 0.15 82);
+  --ink: oklch(0.15 0.04 255);
   --slate: oklch(0.5 0.03 255);
   --cream: oklch(0.985 0.004 260);
   --whatsapp: #25d366;

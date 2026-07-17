@@ -70,16 +70,16 @@ function AboutPage() {
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div className="space-y-6">
               <p className="text-lg leading-relaxed text-muted-foreground">
-                A Expansion nasceu para resolver um dos maiores gargalos das operações logísticas:
-                a falta de mão de obra qualificada no momento certo. Trabalhamos lado a lado com
-                empresas de distribuição, varejo, e-commerce e indústria, oferecendo colaboradores
-                treinados para carga e descarga, separação de pedidos, embalagens, inventários e
-                outras atividades essenciais do armazém.
+                A Expansion nasceu para conectar empresas aos profissionais certos, oferecendo
+                agilidade, segurança e excelência na prestação de serviços.
               </p>
               <p className="text-lg leading-relaxed text-muted-foreground">
-                Nosso diferencial está na capacidade de resposta. Com uma base sólida de
-                profissionais e processos ágeis, conseguimos montar equipes rapidamente, inclusive
-                em horários noturnos, finais de semana e feriados.
+                Atuamos como parceiros estratégicos de nossos clientes, apoiando operações que
+                exigem rapidez, flexibilidade e qualidade na disponibilização de mão de obra.
+              </p>
+              <p className="text-lg leading-relaxed text-muted-foreground">
+                Nosso compromisso é entregar resultados por meio de pessoas qualificadas e de um
+                atendimento próximo, transparente e eficiente.
               </p>
               <ul className="grid gap-3 sm:grid-cols-2">
                 {[
@@ -105,7 +105,7 @@ function AboutPage() {
                   <div className="mt-1 text-muted-foreground">Colaboradores ativos</div>
                 </div>
                 <div className="rounded-2xl bg-card p-6 shadow-sm">
-                  <div className="font-display text-4xl font-bold text-primary">+50</div>
+                  <div className="font-display text-4xl font-bold text-primary">+10</div>
                   <div className="mt-1 text-muted-foreground">Empresas atendidas</div>
                 </div>
                 <div className="rounded-2xl bg-card p-6 shadow-sm">

@@ -3,12 +3,20 @@ import {
   Package,
   Users,
   Clock,
-  Shield,
   Phone,
   ArrowRight,
   CheckCircle,
   Warehouse,
   HelpCircle,
+  Zap,
+  Target,
+  Maximize2,
+  Handshake,
+  Search,
+  ClipboardList,
+  UsersRound,
+  LineChart,
+  ShieldCheck,
 } from "lucide-react";
 import { SectionHeading } from "../components/section-heading";
 import { ServiceCard } from "../components/service-card";
@@ -16,6 +24,7 @@ import heroImage from "../assets/ops-loading.jpg";
 import pickingImage from "../assets/ops-picking.jpg";
 import teamImage from "../assets/ops-team.jpg";
 import nightImage from "../assets/ops-night.jpg";
+import porQueEscolherAsset from "../assets/por-que-escolher.png.asset.json";
 
 const logoBgAsset = "/expansion-logo-vps.png";
 
@@ -28,21 +37,81 @@ const rhetoricalQuestions = [
   "Precisa de equipe disponível em finais de semana e feriados?",
 ];
 
+const deliverables = [
+  { icon: Users, title: "Mão de obra diarista" },
+  { icon: ShieldCheck, title: "Cobertura imediata de faltas e afastamentos" },
+  { icon: Zap, title: "Atendimento em picos de demanda" },
+  { icon: Warehouse, title: "Apoio para operações logísticas e industriais" },
+  { icon: Clock, title: "Reposição rápida de profissionais" },
+  { icon: LineChart, title: "Acompanhamento operacional" },
+  { icon: Handshake, title: "Atendimento personalizado conforme a sua empresa" },
+];
+
+const whyChoose = [
+  {
+    icon: Zap,
+    title: "Rapidez no atendimento",
+    description: "Resposta ágil para minimizar impactos na operação.",
+  },
+  {
+    icon: Target,
+    title: "Compromisso com resultados",
+    description:
+      "Profissionais preparados para atender com responsabilidade e produtividade.",
+  },
+  {
+    icon: Maximize2,
+    title: "Flexibilidade operacional",
+    description: "Soluções adaptadas à realidade e ao ritmo de cada cliente.",
+  },
+  {
+    icon: Handshake,
+    title: "Relacionamento de confiança",
+    description:
+      "Transparência, proximidade e acompanhamento durante toda a parceria.",
+  },
+];
+
+const howWeWork = [
+  {
+    icon: Search,
+    title: "Diagnóstico",
+    description: "Entendemos a necessidade da operação e os desafios do cliente.",
+  },
+  {
+    icon: ClipboardList,
+    title: "Planejamento",
+    description: "Definimos a solução mais adequada para cada cenário.",
+  },
+  {
+    icon: UsersRound,
+    title: "Execução",
+    description:
+      "Disponibilizamos profissionais com rapidez e organização.",
+  },
+  {
+    icon: LineChart,
+    title: "Acompanhamento",
+    description:
+      "Monitoramos continuamente a operação para garantir qualidade e continuidade.",
+  },
+];
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Expansion Soluções em Logística — Mão de Obra Temporária 24h" },
+      { title: "Expansion — Soluções inteligentes em mão de obra 24h" },
       {
         name: "description",
         content:
-          "Expansion Soluções em Logística oferece mão de obra temporária qualificada para carga e descarga, separação, embalagens e inventários. Equipe disponível 24 horas.",
+          "A Expansion fornece mão de obra para operações logísticas, industriais e serviços de apoio, com rapidez, organização e compromisso para manter a produtividade dos nossos clientes.",
       },
-      { property: "og:title", content: "Expansion Soluções em Logística — Mão de Obra Temporária 24h" },
+      { property: "og:title", content: "Expansion — Soluções inteligentes em mão de obra" },
       {
         property: "og:description",
         content:
-          "Mão de obra temporária qualificada para operações logísticas: carga e descarga, separação, embalagens e inventários. Atendimento 24 horas.",
+          "Mão de obra para operações que não podem parar: rapidez, flexibilidade e profissionais preparados no momento certo.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
@@ -117,17 +186,23 @@ function HomePage() {
         <div className="absolute -bottom-20 -left-20 h-80 w-80 rounded-full bg-tangerine/10 blur-3xl" />
         <div className="relative mx-auto grid max-w-7xl gap-12 px-4 py-20 sm:px-6 sm:py-24 lg:grid-cols-2 lg:items-center lg:gap-16 lg:px-8 lg:py-28">
           <div>
-            <span className="inline-flex items-center gap-2 rounded-full border border-tangerine/30 bg-tangerine/10 px-4 py-1.5 text-sm font-semibold text-tangerine-light">
+            <span className="inline-flex items-center gap-2 rounded-full border border-tangerine/40 bg-tangerine/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-tangerine-light">
               <Clock className="h-4 w-4" />
-              Atendimento 24 horas
+              Soluções inteligentes em mão de obra
             </span>
-            <h1 className="mt-6 font-display text-4xl font-bold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
-              Mão de obra temporária para sua operação logística
+            <h1 className="mt-6 font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
+              Soluções inteligentes em mão de obra para{" "}
+              <span className="text-tangerine">operações que não podem parar.</span>
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-cream/80">
-              A Expansion Soluções em Logística fornece colaboradores qualificados para carga e
-              descarga, separação, embalagens, inventários e muito mais. Equipe disponível quando
-              você precisar.
+              A Expansion é especializada no fornecimento de mão de obra para operações
+              logísticas, industriais e serviços de apoio, atuando com rapidez, organização
+              e compromisso para manter a produtividade dos nossos clientes.
+            </p>
+            <p className="mt-4 max-w-2xl text-base leading-relaxed text-cream/70">
+              <strong className="text-cream">Nosso propósito é simples:</strong> oferecer
+              profissionais preparados no momento certo, reduzindo impactos operacionais e
+              contribuindo para a continuidade da sua operação.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
@@ -178,8 +253,8 @@ function HomePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="Nossos Serviços"
-            title="Soluções completas para o seu centro de distribuição"
-            description="Do reforço de equipe à operação completa, entregamos mão de obra especializada para cada etapa da logística."
+            title="Soluções em logística para manter sua operação em movimento"
+            description="Reforçamos sua operação com colaboradores treinados e disponíveis para carga e descarga, separação de pedidos, embalagens, inventários e atendimento 24 horas. Tudo sem burocracia de contratação e com escalabilidade sob demanda."
           />
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((service) => (
@@ -188,6 +263,107 @@ function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* O que a Expansion entrega */}
+      <section className="bg-navy py-20 text-primary-foreground sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            eyebrow="O que a Expansion entrega"
+            title="Suporte prático para cada desafio operacional"
+            description="Da cobertura pontual à parceria contínua, entregamos as soluções que mantêm o ritmo do seu negócio."
+            light
+          />
+          <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {deliverables.map(({ icon: Icon, title }) => (
+              <div
+                key={title}
+                className="flex items-start gap-4 rounded-2xl border border-cream/10 bg-cream/5 p-5 backdrop-blur-sm transition-colors hover:border-tangerine/40 hover:bg-cream/10"
+              >
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-tangerine/15 text-tangerine">
+                  <Icon className="h-5 w-5" />
+                </div>
+                <p className="font-display text-base font-semibold leading-snug text-cream">
+                  {title}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Por que escolher a Expansion */}
+      <section className="py-20 sm:py-28">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            eyebrow="Por que escolher a Expansion"
+            title="Quatro compromissos que sustentam sua operação"
+            description="Nosso diferencial está na forma como atendemos: rápido, próximo e sempre alinhado à realidade de cada cliente."
+          />
+          <div className="mt-14 grid gap-10 lg:grid-cols-[1.05fr_1fr] lg:items-center">
+            <div className="grid gap-6 sm:grid-cols-2">
+              {whyChoose.map(({ icon: Icon, title, description }) => (
+                <div
+                  key={title}
+                  className="group relative overflow-hidden rounded-2xl border border-border bg-card p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-tangerine/40 hover:shadow-lg"
+                >
+                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-navy text-tangerine">
+                    <Icon className="h-6 w-6" />
+                  </div>
+                  <h3 className="mt-5 font-display text-lg font-bold text-card-foreground">
+                    {title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    {description}
+                  </p>
+                </div>
+              ))}
+            </div>
+            <div className="relative overflow-hidden rounded-3xl border border-border shadow-lg">
+              <img
+                src={porQueEscolherAsset.url}
+                alt="Por que escolher a Expansion — equipe qualificada, soluções flexíveis, agilidade, foco em resultados e compromisso com qualidade"
+                className="h-full w-full object-cover"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Como trabalhamos */}
+      <section className="bg-muted py-20 sm:py-28">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            eyebrow="Como trabalhamos"
+            title="Um processo simples, do diagnóstico ao acompanhamento"
+            description="Estruturamos cada parceria em quatro etapas para garantir resultado desde o primeiro dia."
+          />
+          <div className="relative mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {howWeWork.map(({ icon: Icon, title, description }, i) => (
+              <div key={title} className="relative">
+                <div className="flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-sm">
+                  <div className="flex items-center gap-3">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-full bg-tangerine text-navy">
+                      <Icon className="h-5 w-5" />
+                    </div>
+                    <span className="font-display text-3xl font-bold text-tangerine/70">
+                      0{i + 1}
+                    </span>
+                  </div>
+                  <h3 className="mt-4 font-display text-lg font-bold text-card-foreground">
+                    {title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    {description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
 
       {/* Differentials */}
       <section className="bg-muted py-20 sm:py-28">
@@ -230,7 +406,7 @@ function HomePage() {
                   <div className="mt-2 text-sm text-cream/70">Colaboradores ativos</div>
                 </div>
                 <div className="text-center">
-                  <div className="font-display text-5xl font-bold text-tangerine">+50</div>
+                  <div className="font-display text-5xl font-bold text-tangerine">+10</div>
                   <div className="mt-2 text-sm text-cream/70">Empresas atendidas</div>
                 </div>
                 <div className="text-center">
