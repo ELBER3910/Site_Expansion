@@ -320,7 +320,7 @@ function HomePage() {
             </div>
             <div className="relative overflow-hidden rounded-3xl border border-border shadow-lg">
               <img
-                src={porQueEscolherAsset.url}
+                src={porQueEscolherAsset}
                 alt="Por que escolher a Expansion — equipe qualificada, soluções flexíveis, agilidade, foco em resultados e compromisso com qualidade"
                 className="h-full w-full object-cover"
                 loading="lazy"
