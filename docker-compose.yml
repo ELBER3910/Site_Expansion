@@ -1,0 +1,7 @@
+services:
+  expansion:
+    build: .
+    container_name: expansion-site
+    restart: always
+    ports:
+      - "8082:3000"
