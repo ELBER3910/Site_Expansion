@@ -24,7 +24,7 @@ import heroImage from "../assets/ops-loading.jpg";
 import pickingImage from "../assets/ops-picking.jpg";
 import teamImage from "../assets/ops-team.jpg";
 import nightImage from "../assets/ops-night.jpg";
-import porQueEscolherAsset from "../assets/por-que-escolher.png.asset.json";
+import porQueEscolherAsset from "../assets/por-que-escolher.png";
 
 const logoBgAsset = "/expansion-logo-vps.png";
 
