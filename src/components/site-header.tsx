@@ -43,7 +43,7 @@ export function SiteHeader() {
             to="/contato"
             className="ml-4 inline-flex items-center justify-center rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-all hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/20"
           >
-            Solicitar Orçamento
+            Solicitar Orçamento elber!!
           </Link>
         </nav>
 
@@ -77,7 +77,7 @@ export function SiteHeader() {
               onClick={() => setOpen(false)}
               className="mt-2 inline-flex items-center justify-center rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground"
             >
-              Solicitar Orçamento elber
+              Solicitar Orçamento
             </Link>
           </nav>
         </div>
