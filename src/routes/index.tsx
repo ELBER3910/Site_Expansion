@@ -9,9 +9,8 @@ import {
   Warehouse,
   HelpCircle,
   Zap,
-  Target,
-  Maximize2,
   Handshake,
+
   Search,
   ClipboardList,
   UsersRound,
@@ -24,7 +23,6 @@ import heroImage from "../assets/ops-loading.jpg";
 import pickingImage from "../assets/ops-picking.jpg";
 import teamImage from "../assets/ops-team.jpg";
 import nightImage from "../assets/ops-night.jpg";
-import porQueEscolherAsset from "../assets/por-que-escolher.png";
 
 const logoBgAsset = "/expansion-logo-vps.png";
 
@@ -45,31 +43,6 @@ const deliverables = [
   { icon: Clock, title: "Reposição rápida de profissionais" },
   { icon: LineChart, title: "Acompanhamento operacional" },
   { icon: Handshake, title: "Atendimento personalizado conforme a sua empresa" },
-];
-
-const whyChoose = [
-  {
-    icon: Zap,
-    title: "Rapidez no atendimento",
-    description: "Resposta ágil para minimizar impactos na operação.",
-  },
-  {
-    icon: Target,
-    title: "Compromisso com resultados",
-    description:
-      "Profissionais preparados para atender com responsabilidade e produtividade.",
-  },
-  {
-    icon: Maximize2,
-    title: "Flexibilidade operacional",
-    description: "Soluções adaptadas à realidade e ao ritmo de cada cliente.",
-  },
-  {
-    icon: Handshake,
-    title: "Relacionamento de confiança",
-    description:
-      "Transparência, proximidade e acompanhamento durante toda a parceria.",
-  },
 ];
 
 const howWeWork = [
@@ -188,14 +161,14 @@ function HomePage() {
           <div>
             <span className="inline-flex items-center gap-2 rounded-full border border-tangerine/40 bg-tangerine/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-tangerine-light">
               <Clock className="h-4 w-4" />
-              Soluções Logístico
+              Soluções inteligentes em mão de obra
             </span>
             <h1 className="mt-6 font-display text-2xl font-bold leading-[1.05] tracking-tight sm:text-3xl lg:text-4xl">
               Problemas na sua operação logístico com Mão de Obra?{" "}
               <span className="text-tangerine">Garantimos a sua operação em movimento, com nossa estratégia e equipe.</span>
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-cream/80">
-              Somos especialistas em fornecimento de mão de obra para operações
+              A Expansion é especializada no fornecimento de mão de obra para operações
               logísticas, industriais e serviços de apoio, atuando com rapidez, organização
               e compromisso para manter a produtividade dos nossos clientes.
             </p>
@@ -287,45 +260,6 @@ function HomePage() {
                 </p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Por que escolher a Expansion */}
-      <section className="py-20 sm:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            eyebrow="Por que escolher a Expansion"
-            title="Quatro compromissos que sustentam sua operação"
-            description="Nosso diferencial está na forma como atendemos: rápido, próximo e sempre alinhado à realidade de cada cliente."
-          />
-          <div className="mt-14 grid gap-10 lg:grid-cols-[1.05fr_1fr] lg:items-center">
-            <div className="grid gap-6 sm:grid-cols-2">
-              {whyChoose.map(({ icon: Icon, title, description }) => (
-                <div
-                  key={title}
-                  className="group relative overflow-hidden rounded-2xl border border-border bg-card p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-tangerine/40 hover:shadow-lg"
-                >
-                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-navy text-tangerine">
-                    <Icon className="h-6 w-6" />
-                  </div>
-                  <h3 className="mt-5 font-display text-lg font-bold text-card-foreground">
-                    {title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                    {description}
-                  </p>
-                </div>
-              ))}
-            </div>
-            <div className="relative overflow-hidden rounded-3xl border border-border shadow-lg">
-              <img
-                src={porQueEscolherAsset}
-                alt="Por que escolher a Expansion — equipe qualificada, soluções flexíveis, agilidade, foco em resultados e compromisso com qualidade"
-                className="h-full w-full object-cover"
-                loading="lazy"
-              />
-            </div>
           </div>
         </div>
       </section>
