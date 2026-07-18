@@ -190,12 +190,12 @@ function HomePage() {
               <Clock className="h-4 w-4" />
               Soluções Logístico
             </span>
-            <h1 className="mt-6 font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
+            <h1 className="mt-6 font-display text-2xl font-bold leading-[1.05] tracking-tight sm:text-3xl lg:text-4xl">
               Problemas na sua operação logístico com Mão de Obra?{" "}
-              <span className="text-tangerine">Expansion garante sua operação em movimento, com a nossa equipe e estratégia.</span>
+              <span className="text-tangerine">Garantimos a sua operação em movimento, com nossa estratégia e equipe.</span>
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-cream/80">
-              A Expansion é especializada no fornecimento de mão de obra para operações
+              Somos especialistas em fornecimento de mão de obra para operações
               logísticas, industriais e serviços de apoio, atuando com rapidez, organização
               e compromisso para manter a produtividade dos nossos clientes.
             </p>
