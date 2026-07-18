@@ -188,11 +188,11 @@ function HomePage() {
           <div>
             <span className="inline-flex items-center gap-2 rounded-full border border-tangerine/40 bg-tangerine/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-tangerine-light">
               <Clock className="h-4 w-4" />
-              Soluções inteligentes em mão de obra
+              Soluções Logístico
             </span>
             <h1 className="mt-6 font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
-              Soluções inteligentes em mão de obra para{" "}
-              <span className="text-tangerine">operações que não podem parar.</span>
+              Problemas na sua operação logístico com Mão de Obra?{" "}
+              <span className="text-tangerine">Expansion garante sua operação em movimento, com a nossa equipe e estratégia.</span>
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-cream/80">
               A Expansion é especializada no fornecimento de mão de obra para operações
