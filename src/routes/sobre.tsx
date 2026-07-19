@@ -60,7 +60,7 @@ function AboutPage() {
           <SectionHeading
             eyebrow="Quem somos"
             title="Expansion Soluções em Logística"
-            description="Somos uma empresa especializada em fornecer mão de obra temporária qualificada para operações logísticas, com foco em agilidade, segurança e disponibilidade 24 horas."
+            description="Somos uma empresa especializada em fornecer equipe de mão de obra qualificada para operações logísticas, com foco em agilidade, segurança e disponibilidade 24 horas."
           />
         </div>
       </section>
