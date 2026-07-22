@@ -71,7 +71,7 @@ function ContactPage() {
     setSubmitting(true);
     setError(null);
     try {
-      const res = await fetch("https://api.techintelligency.com.br/webhook-test/site_form", {
+      const res = await fetch("https://api.techintelligency.com.br/webhook/site_form", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
