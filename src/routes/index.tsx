@@ -164,13 +164,14 @@ function HomePage() {
               Soluções inteligentes em Logística
             </span>
             <h1 className="mt-6 font-display text-2xl font-bold leading-[1.05] tracking-tight sm:text-3xl lg:text-4xl">
-              Problemas com mão de obra na sua operação logístico?{" "}
-              <span className="text-tangerine">Garantimos a sua operação em movimento, com nossa estratégia e equipe.</span>
+              Problemas com mão de obra para montar sua operação logístico?{" "}
+              <span className="text-tangerine">A Expansion é especializada em estruturar, implantar e assumir operações logístico completa, dede a motagem da operação do zero até a gestão integral das equipes e dos processos.</span>
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-cream/80">
-              Somos especialistas em fornecimento de mão de obra para operações de 
-              logísticas, industriais e serviços de apoio, atuando com rapidez, organização
-              e compromisso para manter a produtividade dos nossos clientes.
+              Oferecemos profissionais qualificados para garantir mais prdutividade,    
+              eficiência, e resultados. Atendemos operações de logísticas, industriais
+              e serviços de apoio, atuando com rapidez, organização e compromisso para 
+              manter a produtividade dos nossos clientes.
             </p>
             <p className="mt-4 max-w-2xl text-base leading-relaxed text-cream/70">
               <strong className="text-cream">Nosso propósito é simples:</strong> oferecer
