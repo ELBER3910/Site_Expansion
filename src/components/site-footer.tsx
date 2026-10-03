@@ -87,7 +87,9 @@ export function SiteFooter() {
               </li>
               <li className="flex items-start gap-3 text-sm text-cream/70">
                 <Mail className="mt-0.5 h-4 w-4 shrink-0 text-tangerine" />
-                <span>expansionex@hotmail.com</span>
+                <span>comercial@expansionsolucoeslogistica.com.br</span>
+                <span>vendas@expansionsolucoeslogistica.com.br</span>
+                <span>financeiro@expansionsolucoeslogistica.com.br</span>
               </li>
               <li className="flex items-start gap-3 text-sm text-cream/70">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-tangerine" />
