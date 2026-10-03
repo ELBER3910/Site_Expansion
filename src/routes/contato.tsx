@@ -36,8 +36,12 @@ const contactInfo = [
   {
     icon: Mail,
     label: "E-mail",
-    value: "expansionex@hotmail.com",
-    href: "mailto:expansionex@hotmail.com",
+    value: "comercial@expansionsolucoeslogistica.com.br",
+    value: "vendas@expansionsolucoeslogistica.com.br",
+    value: "financeiro@expansionsolucoeslogistica.com.br",
+    href: "mailto:comercial@expansionsolucoeslogistica.com.br",
+    href: "mailto:vendas@expansionsolucoeslogistica.com.br",
+    href: "mailto:financeiro@expansionsolucoeslogistica.com.br",
   },
   {
     icon: MapPin,
