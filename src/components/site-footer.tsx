@@ -88,7 +88,13 @@ export function SiteFooter() {
               <li className="flex items-start gap-3 text-sm text-cream/70">
                 <Mail className="mt-0.5 h-4 w-4 shrink-0 text-tangerine" />
                 <span>comercial@expansionsolucoeslogistica.com.br</span>
+              </li>
+               <li className="flex items-start gap-3 text-sm text-cream/70">
+                <Mail className="mt-0.5 h-4 w-4 shrink-0 text-tangerine" />
                 <span>vendas@expansionsolucoeslogistica.com.br</span>
+              </li>
+               <li className="flex items-start gap-3 text-sm text-cream/70">
+                <Mail className="mt-0.5 h-4 w-4 shrink-0 text-tangerine" />
                 <span>financeiro@expansionsolucoeslogistica.com.br</span>
               </li>
               <li className="flex items-start gap-3 text-sm text-cream/70">
