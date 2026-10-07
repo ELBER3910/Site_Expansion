@@ -15,14 +15,58 @@ import { SiteHeader } from "../components/site-header";
 import { SiteFooter } from "../components/site-footer";
 import { WhatsAppButton } from "../components/whatsapp-button";
 
-/**
- * URL oficial do site.
- * Usamos essa constante para manter as URLs de SEO padronizadas.
- */
 const SITE_URL = "https://www.expansionsolucoeslogistica.com.br";
 
 /**
- * Página 404
+ * DADOS ESTRUTURADOS - SCHEMA.ORG
+ *
+ * Ajuda mecanismos de busca a entenderem que este site
+ * pertence à Expansion Soluções em Logística.
+ *
+ * Foram utilizados apenas dados conhecidos da empresa.
+ */
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+
+  name: "Expansion Soluções em Logística",
+
+  alternateName: "Expansion Soluções Logísticas",
+
+  url: `${SITE_URL}/`,
+
+  logo: `${SITE_URL}/expansion-logo-vps.png`,
+
+  description:
+    "Empresa de soluções logísticas e mão de obra para carga e descarga, separação de pedidos, inventários, embalagens e operações logísticas.",
+
+  telephone: "+55 35 99952-3303",
+
+  email: "comercial@expansionsolucoeslogistica.com.br",
+
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      telephone: "+55 35 99952-3303",
+      contactType: "customer service",
+      email: "comercial@expansionsolucoeslogistica.com.br",
+      areaServed: "BR",
+      availableLanguage: ["Portuguese"],
+    },
+  ],
+
+  areaServed: {
+    "@type": "City",
+    name: "Extrema",
+    containedInPlace: {
+      "@type": "State",
+      name: "Minas Gerais",
+    },
+  },
+};
+
+/**
+ * PÁGINA 404
  */
 function NotFoundComponent() {
   return (
@@ -54,7 +98,7 @@ function NotFoundComponent() {
 }
 
 /**
- * Página de erro
+ * PÁGINA DE ERRO
  */
 function ErrorComponent({
   error,
@@ -109,150 +153,183 @@ function ErrorComponent({
 }
 
 /**
- * Rota raiz da aplicação
- *
- * Aqui ficam os metadados padrão do site.
- * Cada página poderá sobrescrever title, description,
- * canonical e Open Graph quando necessário.
+ * CONFIGURAÇÃO PRINCIPAL DA APLICAÇÃO
  */
-export const Route = createRootRouteWithContext<{
-  queryClient: QueryClient;
-}>()({
-  head: () => ({
-    meta: [
-      /**
-       * Configurações básicas
-       */
-      {
-        charSet: "utf-8",
-      },
-      {
-        name: "viewport",
-        content: "width=device-width, initial-scale=1",
-      },
+export const Route =
+  createRootRouteWithContext<{
+    queryClient: QueryClient;
+  }>()({
+    head: () => ({
+      meta: [
+        {
+          charSet: "utf-8",
+        },
 
-      /**
-       * SEO padrão
-       */
-      {
-        title: "Expansion Soluções Logísticas | Logística em Extrema MG",
-      },
-      {
-        name: "description",
-        content:
-          "Mão de obra e soluções logísticas em Extrema-MG. Carga e descarga, separação de pedidos, inventários, embalagens e equipes para operações logísticas.",
-      },
-      {
-        name: "author",
-        content: "Expansion Soluções em Logística",
-      },
-      {
-        name: "robots",
-        content: "index, follow",
-      },
-      {
-        name: "googlebot",
-        content:
-          "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-      },
+        {
+          name: "viewport",
+          content: "width=device-width, initial-scale=1",
+        },
 
-      /**
-       * Open Graph
-       * Usado principalmente ao compartilhar o site
-       * em redes sociais e aplicativos.
-       */
-      {
-        property: "og:title",
-        content: "Expansion Soluções Logísticas | Extrema MG",
-      },
-      {
-        property: "og:description",
-        content:
-          "Soluções logísticas e mão de obra para empresas em Extrema-MG e região. Carga e descarga, separação, inventários, embalagens e equipes sob demanda.",
-      },
-      {
-        property: "og:type",
-        content: "website",
-      },
-      {
-        property: "og:site_name",
-        content: "Expansion Soluções em Logística",
-      },
-      {
-        property: "og:locale",
-        content: "pt_BR",
-      },
-      {
-        property: "og:url",
-        content: `${SITE_URL}/`,
-      },
+        {
+          title:
+            "Expansion Soluções Logísticas | Logística em Extrema MG",
+        },
 
-      /**
-       * Twitter / X
-       */
-      {
-        name: "twitter:card",
-        content: "summary_large_image",
-      },
-      {
-        name: "twitter:title",
-        content: "Expansion Soluções Logísticas | Extrema MG",
-      },
-      {
-        name: "twitter:description",
-        content:
-          "Soluções logísticas e mão de obra para empresas em Extrema-MG e região.",
-      },
-    ],
+        {
+          name: "description",
+          content:
+            "Mão de obra e soluções logísticas em Extrema-MG. Carga e descarga, separação de pedidos, inventários, embalagens e equipes para operações logísticas.",
+        },
 
-    /**
-     * Links globais
-     */
-    links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
-      {
-        rel: "icon",
-        href: "/favicon.jpg",
-        type: "image/jpg",
-      },
-      {
-        rel: "preconnect",
-        href: "https://fonts.googleapis.com",
-      },
-      {
-        rel: "preconnect",
-        href: "https://fonts.gstatic.com",
-        crossOrigin: "anonymous",
-      },
-      {
-        rel: "stylesheet",
-        href:
-          "https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap",
-      },
-    ],
-  }),
+        {
+          name: "author",
+          content: "Expansion Soluções em Logística",
+        },
 
-  shellComponent: RootShell,
-  component: RootComponent,
-  notFoundComponent: NotFoundComponent,
-  errorComponent: ErrorComponent,
-});
+        /**
+         * INDEXAÇÃO
+         */
+        {
+          name: "robots",
+          content: "index, follow",
+        },
+
+        {
+          name: "googlebot",
+          content:
+            "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+        },
+
+        /**
+         * OPEN GRAPH
+         */
+        {
+          property: "og:title",
+          content: "Expansion Soluções Logísticas | Extrema MG",
+        },
+
+        {
+          property: "og:description",
+          content:
+            "Soluções logísticas e mão de obra para empresas em Extrema-MG e região.",
+        },
+
+        {
+          property: "og:type",
+          content: "website",
+        },
+
+        {
+          property: "og:site_name",
+          content: "Expansion Soluções em Logística",
+        },
+
+        {
+          property: "og:locale",
+          content: "pt_BR",
+        },
+
+        {
+          property: "og:url",
+          content: `${SITE_URL}/`,
+        },
+
+        /**
+         * TWITTER / X
+         */
+        {
+          name: "twitter:card",
+          content: "summary_large_image",
+        },
+
+        {
+          name: "twitter:title",
+          content: "Expansion Soluções Logísticas | Extrema MG",
+        },
+
+        {
+          name: "twitter:description",
+          content:
+            "Soluções logísticas e mão de obra para empresas em Extrema-MG e região.",
+        },
+      ],
+
+      links: [
+        /**
+         * CSS
+         */
+        {
+          rel: "stylesheet",
+          href: appCss,
+        },
+
+        /**
+         * FAVICON
+         */
+        {
+          rel: "icon",
+          href: "/favicon.jpg",
+          type: "image/jpg",
+        },
+
+        /**
+         * FONTES
+         */
+        {
+          rel: "preconnect",
+          href: "https://fonts.googleapis.com",
+        },
+
+        {
+          rel: "preconnect",
+          href: "https://fonts.gstatic.com",
+          crossOrigin: "anonymous",
+        },
+
+        {
+          rel: "stylesheet",
+          href: "https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap",
+        },
+      ],
+    }),
+
+    shellComponent: RootShell,
+
+    component: RootComponent,
+
+    notFoundComponent: NotFoundComponent,
+
+    errorComponent: ErrorComponent,
+  });
 
 /**
- * Estrutura HTML principal
+ * HTML PRINCIPAL
  */
-function RootShell({ children }: { children: ReactNode }) {
+function RootShell({
+  children,
+}: {
+  children: ReactNode;
+}) {
   return (
     <html lang="pt-BR">
       <head>
         <HeadContent />
+
+        {/*
+          Dados estruturados Schema.org.
+          O JSON-LD não aparece visualmente no site.
+        */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
       </head>
 
       <body>
         {children}
+
         <Scripts />
       </body>
     </html>
@@ -260,7 +337,7 @@ function RootShell({ children }: { children: ReactNode }) {
 }
 
 /**
- * Estrutura visual principal do site
+ * ESTRUTURA VISUAL PRINCIPAL
  */
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
