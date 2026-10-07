@@ -10,20 +10,22 @@ import {
   HelpCircle,
   Zap,
   Handshake,
-
   Search,
   ClipboardList,
   UsersRound,
   LineChart,
   ShieldCheck,
 } from "lucide-react";
+
 import { SectionHeading } from "../components/section-heading";
 import { ServiceCard } from "../components/service-card";
+
 import heroImage from "../assets/ops-loading.jpg";
 import pickingImage from "../assets/ops-picking.jpg";
 import teamImage from "../assets/ops-team.jpg";
 import nightImage from "../assets/ops-night.jpg";
 
+const SITE_URL = "https://www.expansionsolucoeslogistica.com.br";
 const logoBgAsset = "/expansion-logo-vps.png";
 
 const rhetoricalQuestions = [
@@ -36,25 +38,48 @@ const rhetoricalQuestions = [
 ];
 
 const deliverables = [
-  { icon: Users, title: "Mão de obra diarista" },
-  { icon: ShieldCheck, title: "Cobertura imediata de faltas e afastamentos" },
-  { icon: Zap, title: "Atendimento em picos de demanda" },
-  { icon: Warehouse, title: "Apoio para operações logísticas e industriais" },
-  { icon: Clock, title: "Reposição rápida de profissionais" },
-  { icon: LineChart, title: "Acompanhamento operacional" },
-  { icon: Handshake, title: "Atendimento personalizado conforme a sua empresa" },
+  {
+    icon: Users,
+    title: "Mão de obra diarista",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Cobertura imediata de faltas e afastamentos",
+  },
+  {
+    icon: Zap,
+    title: "Atendimento em picos de demanda",
+  },
+  {
+    icon: Warehouse,
+    title: "Apoio para operações logísticas e industriais",
+  },
+  {
+    icon: Clock,
+    title: "Reposição rápida de profissionais",
+  },
+  {
+    icon: LineChart,
+    title: "Acompanhamento operacional",
+  },
+  {
+    icon: Handshake,
+    title: "Atendimento personalizado conforme a sua empresa",
+  },
 ];
 
 const howWeWork = [
   {
     icon: Search,
     title: "Diagnóstico",
-    description: "Entendemos a necessidade da operação e os desafios do cliente.",
+    description:
+      "Entendemos a necessidade da operação e os desafios do cliente.",
   },
   {
     icon: ClipboardList,
     title: "Planejamento",
-    description: "Definimos a solução mais adequada para cada cenário.",
+    description:
+      "Definimos a solução mais adequada para cada cenário.",
   },
   {
     icon: UsersRound,
@@ -70,27 +95,58 @@ const howWeWork = [
   },
 ];
 
-
+/**
+ * SEO DA PÁGINA INICIAL
+ */
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Expansion — Soluções inteligentes em mão de obra 24h" },
+      {
+        title: "Expansion Soluções Logísticas | Logística em Extrema MG",
+      },
       {
         name: "description",
         content:
-          "A Expansion fornece mão de obra para operações logísticas, industriais e serviços de apoio, com rapidez, organização e compromisso para manter a produtividade dos nossos clientes.",
+          "Soluções logísticas e mão de obra em Extrema-MG para carga e descarga, separação de pedidos, inventários, embalagens e operações logísticas.",
       },
-      { property: "og:title", content: "Expansion — Soluções inteligentes em mão de obra" },
+
+      {
+        property: "og:title",
+        content: "Expansion Soluções Logísticas | Extrema MG",
+      },
       {
         property: "og:description",
         content:
-          "Mão de obra para operações que não podem parar: rapidez, flexibilidade e profissionais preparados no momento certo.",
+          "Soluções logísticas e mão de obra para empresas em Extrema-MG e região. Equipes preparadas para manter sua operação em movimento.",
       },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
+      {
+        property: "og:type",
+        content: "website",
+      },
+      {
+        property: "og:url",
+        content: `${SITE_URL}/`,
+      },
+
+      {
+        name: "twitter:title",
+        content: "Expansion Soluções Logísticas | Extrema MG",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Soluções logísticas e mão de obra para empresas em Extrema-MG e região.",
+      },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+
+    links: [
+      {
+        rel: "canonical",
+        href: `${SITE_URL}/`,
+      },
+    ],
   }),
+
   component: HomePage,
 });
 
@@ -145,39 +201,51 @@ const highlights = [
 function HomePage() {
   return (
     <>
-      {/* Hero */}
+      {/* HERO */}
       <section className="relative overflow-hidden bg-navy text-primary-foreground">
         <img
           src={logoBgAsset}
           alt=""
           aria-hidden="true"
           loading="eager"
-          className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-20 blur-2xl scale-125 mix-blend-screen"
+          className="pointer-events-none absolute inset-0 h-full w-full scale-125 object-cover opacity-20 blur-2xl mix-blend-screen"
         />
+
         <div className="absolute inset-0 bg-stripes opacity-30" />
+
         <div className="absolute -right-20 -top-20 h-96 w-96 rounded-full bg-tangerine/10 blur-3xl" />
+
         <div className="absolute -bottom-20 -left-20 h-80 w-80 rounded-full bg-tangerine/10 blur-3xl" />
+
         <div className="relative mx-auto grid max-w-7xl gap-12 px-4 py-20 sm:px-6 sm:py-24 lg:grid-cols-2 lg:items-center lg:gap-16 lg:px-8 lg:py-28">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full border border-tangerine/40 bg-tangerine/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-tangerine-light">
               <Clock className="h-4 w-4" />
-              Soluções inteligentes em Logística
+              Soluções Logísticas em Extrema-MG
             </span>
+
             <h1 className="mt-6 font-display text-2xl font-bold leading-[1.05] tracking-tight sm:text-3xl lg:text-4xl">
-              Problemas em montar sua operação logístico?{" "}
-              <span className="text-tangerine">Somos especializados em estruturar e implantar operações logístico, desde a montagem da operação do zero até a gestão integral das equipes.</span>
+              Mão de obra e soluções logísticas para sua operação{" "}
+              <span className="text-tangerine">
+                em Extrema-MG
+              </span>
             </h1>
+
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-cream/80">
-              Oferecemos profissionais qualificados para garantir mais produtividade,    
-              eficiência, e resultados. Atendemos operações de logísticas, industriais
-              e serviços de apoio, atuando com rapidez, organização e compromisso para 
-              manter a produtividade dos nossos clientes.
+              A Expansion oferece profissionais qualificados para carga e
+              descarga, separação de pedidos, embalagens, inventários e outras
+              operações logísticas, industriais e serviços de apoio.
             </p>
+
             <p className="mt-4 max-w-2xl text-base leading-relaxed text-cream/70">
-              <strong className="text-cream">Nosso propósito é simples:</strong> oferecer
-              profissionais preparados no momento certo, reduzindo impactos operacionais e
-              contribuindo para a continuidade da sua operação.
+              <strong className="text-cream">
+                Nosso propósito é simples:
+              </strong>{" "}
+              oferecer profissionais preparados no momento certo, reduzindo
+              impactos operacionais e contribuindo para a continuidade e
+              produtividade da sua operação.
             </p>
+
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
                 to="/contato"
@@ -186,6 +254,7 @@ function HomePage() {
                 Solicitar Orçamento
                 <ArrowRight className="h-5 w-5" />
               </Link>
+
               <Link
                 to="/servicos"
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-cream/30 bg-cream/5 px-7 py-3.5 text-base font-semibold text-cream backdrop-blur-sm transition-all hover:bg-cream/10"
@@ -197,23 +266,31 @@ function HomePage() {
 
           <div className="relative">
             <div className="absolute -inset-4 rounded-3xl bg-tangerine/20 blur-2xl" />
+
             <div className="relative overflow-hidden rounded-3xl border border-cream/10 shadow-2xl shadow-black/40">
               <img
                 src={heroImage}
-                alt="Equipe Expansion realizando carga e descarga em armazém"
+                alt="Equipe da Expansion em operação logística de carga e descarga"
                 width={1600}
                 height={1067}
                 className="h-full w-full object-cover"
               />
             </div>
+
             <div className="absolute -bottom-6 -left-6 hidden rounded-2xl border border-cream/10 bg-navy-dark/95 p-4 shadow-xl backdrop-blur sm:block">
               <div className="flex items-center gap-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-tangerine/20 text-tangerine">
                   <Users className="h-5 w-5" />
                 </div>
+
                 <div>
-                  <div className="font-display text-lg font-bold leading-none text-cream">+200</div>
-                  <div className="text-xs text-cream/70">colaboradores ativos</div>
+                  <div className="font-display text-lg font-bold leading-none text-cream">
+                    +200
+                  </div>
+
+                  <div className="text-xs text-cream/70">
+                    colaboradores ativos
+                  </div>
                 </div>
               </div>
             </div>
@@ -221,24 +298,27 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Services */}
+      {/* SERVIÇOS */}
       <section className="py-20 sm:py-28">
-
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="Nossos Serviços"
-            title="Soluções em logística para manter sua operação em movimento"
-            description="Reforçamos sua operação com colaboradores treinados e disponíveis para carga e descarga, separação de pedidos, embalagens, inventários e atendimento 24 horas. Tudo sem burocracia de contratação e com escalabilidade sob demanda."
+            title="Soluções logísticas para manter sua operação em movimento"
+            description="Reforçamos sua operação com colaboradores treinados e disponíveis para carga e descarga, separação de pedidos, embalagens, inventários e atendimento 24 horas, com escalabilidade conforme a demanda."
           />
+
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((service) => (
-              <ServiceCard key={service.title} {...service} />
+              <ServiceCard
+                key={service.title}
+                {...service}
+              />
             ))}
           </div>
         </div>
       </section>
 
-      {/* O que a Expansion entrega */}
+      {/* O QUE A EXPANSION ENTREGA */}
       <section className="bg-navy py-20 text-primary-foreground sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
@@ -247,6 +327,7 @@ function HomePage() {
             description="Da cobertura pontual à parceria contínua, entregamos as soluções que mantêm o ritmo do seu negócio."
             light
           />
+
           <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {deliverables.map(({ icon: Icon, title }) => (
               <div
@@ -256,6 +337,7 @@ function HomePage() {
                 <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-tangerine/15 text-tangerine">
                   <Icon className="h-5 w-5" />
                 </div>
+
                 <p className="font-display text-base font-semibold leading-snug text-cream">
                   {title}
                 </p>
@@ -265,42 +347,46 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Como trabalhamos */}
+      {/* COMO TRABALHAMOS */}
       <section className="bg-muted py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="Como trabalhamos"
             title="Um processo simples, do diagnóstico ao acompanhamento"
-            description="Estruturamos cada parceria em quatro etapas para garantir resultado desde o primeiro dia."
+            description="Estruturamos cada parceria em quatro etapas para garantir organização, agilidade e acompanhamento da operação."
           />
+
           <div className="relative mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {howWeWork.map(({ icon: Icon, title, description }, i) => (
-              <div key={title} className="relative">
-                <div className="flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-sm">
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-11 w-11 items-center justify-center rounded-full bg-tangerine text-navy">
-                      <Icon className="h-5 w-5" />
+            {howWeWork.map(
+              ({ icon: Icon, title, description }, i) => (
+                <div key={title} className="relative">
+                  <div className="flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-sm">
+                    <div className="flex items-center gap-3">
+                      <div className="flex h-11 w-11 items-center justify-center rounded-full bg-tangerine text-navy">
+                        <Icon className="h-5 w-5" />
+                      </div>
+
+                      <span className="font-display text-3xl font-bold text-tangerine/70">
+                        0{i + 1}
+                      </span>
                     </div>
-                    <span className="font-display text-3xl font-bold text-tangerine/70">
-                      0{i + 1}
-                    </span>
+
+                    <h3 className="mt-4 font-display text-lg font-bold text-card-foreground">
+                      {title}
+                    </h3>
+
+                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                      {description}
+                    </p>
                   </div>
-                  <h3 className="mt-4 font-display text-lg font-bold text-card-foreground">
-                    {title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                    {description}
-                  </p>
                 </div>
-              </div>
-            ))}
+              ),
+            )}
           </div>
         </div>
       </section>
 
-
-
-      {/* Differentials */}
+      {/* DIFERENCIAIS */}
       <section className="bg-muted py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
@@ -309,18 +395,26 @@ function HomePage() {
                 align="left"
                 eyebrow="Por que Expansion"
                 title="Confiança, agilidade e operação sempre ativa"
-                description="Entendemos que a logística não pode parar. Por isso, oferecemos colaboradores preparados, processos ágeis e flexibilidade total de horários."
+                description="Entendemos que a logística não pode parar. Por isso, oferecemos colaboradores preparados, processos ágeis e flexibilidade de horários."
               />
+
               <ul className="mt-8 grid gap-4 sm:grid-cols-2">
                 {highlights.map((item) => (
-                  <li key={item} className="flex items-start gap-3">
+                  <li
+                    key={item}
+                    className="flex items-start gap-3"
+                  >
                     <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-tangerine/10 text-tangerine">
                       <CheckCircle className="h-4 w-4" />
                     </div>
-                    <span className="text-foreground">{item}</span>
+
+                    <span className="text-foreground">
+                      {item}
+                    </span>
                   </li>
                 ))}
               </ul>
+
               <Link
                 to="/sobre"
                 className="mt-8 inline-flex items-center gap-2 text-sm font-bold text-primary hover:text-accent"
@@ -329,24 +423,49 @@ function HomePage() {
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
+
             <div className="relative rounded-3xl bg-navy p-8 text-primary-foreground sm:p-12">
               <div className="absolute -left-4 -top-4 h-24 w-24 rounded-full bg-tangerine/20 blur-2xl" />
+
               <div className="relative grid gap-8 sm:grid-cols-2">
                 <div className="text-center">
-                  <div className="font-display text-5xl font-bold text-tangerine">24h</div>
-                  <div className="mt-2 text-sm text-cream/70">Equipe disponível</div>
+                  <div className="font-display text-5xl font-bold text-tangerine">
+                    24h
+                  </div>
+
+                  <div className="mt-2 text-sm text-cream/70">
+                    Equipe disponível
+                  </div>
                 </div>
+
                 <div className="text-center">
-                  <div className="font-display text-5xl font-bold text-tangerine">+200</div>
-                  <div className="mt-2 text-sm text-cream/70">Colaboradores ativos</div>
+                  <div className="font-display text-5xl font-bold text-tangerine">
+                    +200
+                  </div>
+
+                  <div className="mt-2 text-sm text-cream/70">
+                    Colaboradores ativos
+                  </div>
                 </div>
+
                 <div className="text-center">
-                  <div className="font-display text-5xl font-bold text-tangerine">+10</div>
-                  <div className="mt-2 text-sm text-cream/70">Empresas atendidas</div>
+                  <div className="font-display text-5xl font-bold text-tangerine">
+                    +10
+                  </div>
+
+                  <div className="mt-2 text-sm text-cream/70">
+                    Empresas atendidas
+                  </div>
                 </div>
+
                 <div className="text-center">
-                  <div className="font-display text-5xl font-bold text-tangerine">100%</div>
-                  <div className="mt-2 text-sm text-cream/70">Foco em segurança</div>
+                  <div className="font-display text-5xl font-bold text-tangerine">
+                    100%
+                  </div>
+
+                  <div className="mt-2 text-sm text-cream/70">
+                    Foco em segurança
+                  </div>
                 </div>
               </div>
             </div>
@@ -354,7 +473,7 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Operations gallery */}
+      {/* GALERIA DE OPERAÇÕES */}
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
@@ -362,56 +481,65 @@ function HomePage() {
             title="Equipes em ação, do amanhecer à madrugada"
             description="Cada turno é conduzido por profissionais treinados, uniformizados e prontos para manter o ritmo da sua cadeia logística."
           />
+
           <div className="mt-14 grid gap-4 sm:grid-cols-6 sm:grid-rows-2 sm:gap-6">
-            <div className="group relative overflow-hidden rounded-3xl sm:col-span-4 sm:row-span-2 aspect-[4/3] sm:aspect-auto">
+            <div className="group relative aspect-[4/3] overflow-hidden rounded-3xl sm:col-span-4 sm:row-span-2 sm:aspect-auto">
               <img
                 src={pickingImage}
-                alt="Colaborador realizando separação de pedidos com leitor de código de barras"
+                alt="Colaborador realizando separação de pedidos em operação logística"
                 width={1600}
                 height={1067}
                 loading="lazy"
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
+
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy-dark/90 via-navy-dark/40 to-transparent p-6 sm:p-8">
                 <div className="text-xs font-bold uppercase tracking-widest text-tangerine-light">
                   Separação & Picking
                 </div>
+
                 <div className="mt-1 font-display text-xl font-bold text-cream sm:text-2xl">
                   Precisão em cada pedido
                 </div>
               </div>
             </div>
-            <div className="group relative overflow-hidden rounded-3xl sm:col-span-2 aspect-[4/3] sm:aspect-auto">
+
+            <div className="group relative aspect-[4/3] overflow-hidden rounded-3xl sm:col-span-2 sm:aspect-auto">
               <img
                 src={teamImage}
-                alt="Equipe de operações logísticas com tablets em centro de distribuição"
+                alt="Equipe em operação de inventário e controle de estoque"
                 width={1600}
                 height={1067}
                 loading="lazy"
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
+
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy-dark/90 via-navy-dark/40 to-transparent p-5">
                 <div className="text-xs font-bold uppercase tracking-widest text-tangerine-light">
                   Inventário
                 </div>
+
                 <div className="mt-1 font-display text-lg font-bold text-cream">
                   Controle total do estoque
                 </div>
               </div>
             </div>
-            <div className="group relative overflow-hidden rounded-3xl sm:col-span-2 aspect-[4/3] sm:aspect-auto">
+
+            <div className="group relative aspect-[4/3] overflow-hidden rounded-3xl sm:col-span-2 sm:aspect-auto">
               <img
                 src={nightImage}
-                alt="Operação logística durante o turno noturno em doca de carregamento"
+                alt="Operação logística em turno noturno"
                 width={1600}
                 height={1067}
                 loading="lazy"
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
+
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy-dark/90 via-navy-dark/40 to-transparent p-5">
                 <div className="text-xs font-bold uppercase tracking-widest text-tangerine-light">
                   Turno Noturno
                 </div>
+
                 <div className="mt-1 font-display text-lg font-bold text-cream">
                   Operação 24 horas
                 </div>
@@ -421,14 +549,15 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Rhetorical questions */}
+      {/* PERGUNTAS */}
       <section className="bg-muted py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="Reflexão"
             title="Perguntas que fazem diferença na sua operação"
-            description="Muitos gestores de logística enfrentam esses desafios todos os dias. A Expansion oferece a resposta prática: mão de obra qualificada, sem burocracia e disponível quando você precisa."
+            description="Muitos gestores de logística enfrentam esses desafios todos os dias. A Expansion oferece mão de obra qualificada e disponível quando sua operação precisa."
           />
+
           <div className="mx-auto mt-14 grid max-w-4xl gap-6 sm:grid-cols-2">
             {rhetoricalQuestions.map((question) => (
               <div
@@ -438,12 +567,14 @@ function HomePage() {
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-tangerine/10 text-tangerine">
                   <HelpCircle className="h-5 w-5" />
                 </div>
+
                 <p className="font-display text-lg font-semibold leading-snug text-card-foreground">
                   {question}
                 </p>
               </div>
             ))}
           </div>
+
           <div className="mt-12 text-center">
             <Link
               to="/contato"
@@ -456,20 +587,25 @@ function HomePage() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* CTA FINAL */}
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="relative overflow-hidden rounded-3xl bg-primary px-6 py-16 text-primary-foreground sm:px-16 sm:py-20">
             <div className="absolute -right-20 -top-20 h-80 w-80 rounded-full bg-tangerine/20 blur-3xl" />
+
             <div className="absolute -bottom-20 -left-20 h-80 w-80 rounded-full bg-tangerine/20 blur-3xl" />
+
             <div className="relative mx-auto max-w-3xl text-center">
               <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">
-                Precisa reforçar sua equipe agora?
+                Precisa reforçar sua operação logística?
               </h2>
+
               <p className="mt-4 text-lg text-primary-foreground/80">
-                Fale conosco e receba uma proposta personalizada em poucas horas. Atendemos
-                emergências e demandas programadas com a mesma agilidade.
+                Fale com a Expansion e solicite uma proposta personalizada
+                para sua empresa. Atendemos demandas emergenciais e
+                programadas.
               </p>
+
               <div className="mt-8 flex flex-wrap justify-center gap-4">
                 <Link
                   to="/contato"
@@ -478,6 +614,7 @@ function HomePage() {
                   <Phone className="h-5 w-5" />
                   Falar com um consultor
                 </Link>
+
                 <a
                   href="https://wa.me/5535999523303"
                   target="_blank"
